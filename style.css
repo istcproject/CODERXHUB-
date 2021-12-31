@@ -573,6 +573,15 @@ background-color: blueviolet;
 }
 /* till here */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #FCBA7F;
+}
 .wrapperforcookies{
   position: absolute;
   bottom: 30px;
