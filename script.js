@@ -10,7 +10,7 @@
             alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
           }
         }
-       //checking our cookie
+     
         //if cookie is set then hide the cookie box else show it
         checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 
