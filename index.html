@@ -162,7 +162,108 @@ body{
        </div>
     </a>
  </div>
-   
+      <div class="wrapperforcookies">
+        <img src="#" alt="">
+        <div class="contentforcookies">
+          <header>Cookies Consent</header>
+          <p>This website use cookies to ensure you get the best experience on our website.</p>
+          <div class="contentforcookies">
+            <button class="itemforcookies">I understand</button>
+            <a href="#" class="itemforcookies">Learn more</a>
+          </div>
+        </div>
+      </div>
+ 
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #FCBA7F;
+}
+.wrapperforcookies{
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  max-width: 365px;
+  background: #fff;
+  padding: 25px 25px 30px 25px;
+  border-radius: 15px;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+  text-align: center;
+}
+.wrapperforcookies.hide{
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+::selection{
+  color: #fff;
+  background: #FCBA7F;
+}
+.wrapperforcookies img{
+  max-width: 90px;
+}
+.contentforcookies header{
+  font-size: 25px;
+  font-weight: 600;
+}
+.contentforcookies{
+  margin-top: 10px;
+}
+.contentforcookies p{
+  color: #858585;
+  margin: 5px 0 20px 0;
+}
+.contentforcookies .contentforcookies{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contentforcookies button{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #FCBA7F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contentforcookies button:hover{
+  transform: scale(0.97);
+}
+.contentforcookies .itemforcookies{
+  margin: 0 10px;
+}
+.contentforcookies a{
+  color: #FCBA7F;
+}
+</style>
+<script>
+ const cookieBox = document.querySelector(".wrapperforcookies"),
+        acceptBtn = cookieBox.querySelector("button");
+        acceptBtn.onclick = ()=>{
+          //setting cookie for 1 month, after one month it'll be expired automatically
+          document.cookie = "CookieBy=ketanpuri; max-age="+60*60*24*30;
+          if(document.cookie){ //if cookie is set
+            cookieBox.classList.add("hide"); //hide cookie box
+          }else{ //if cookie not set then alert an error
+            alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+          }
+        }
+     
+        //if cookie is set then hide the cookie box else show it
+        checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+</script>
   <footer>
     <span>Created By <a href="ketan.html">Ketan Puri</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
 </footer></div>
