@@ -47,7 +47,7 @@ section{
     justify-content: space-between;
 }
 section .title{
-    color: black;
+   
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -508,7 +508,8 @@ body{
     padding: 0 15px;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;color
+        
 }
 .contact .right form .field input:focus,
 .contact .right form .textarea textarea:focus{
