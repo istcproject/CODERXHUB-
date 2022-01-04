@@ -1,0 +1,20 @@
+*{
+margin: 0%;
+padding: 0px;
+
+}
+body{
+background-repeat: repeat;
+background-size: 100%;
+    background-image: url("bgimgyt.jpg") ;
+}
+.topnavtwo{
+    padding-top: 13px;
+   height: 80px;
+    background-image:url("pexels-lukas-574069(1).jpg");
+    text-align: center;
+font-size: 40px;
+font-variant: small-caps;
+font-weight:bolder;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
