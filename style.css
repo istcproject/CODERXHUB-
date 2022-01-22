@@ -19,6 +19,8 @@ nav{
 
 }
 nav .wrapper{
+  margin:0px;
+  padding:0px;
   position: relative;
   max-width: 1300px;
   padding: 0px 30px;
