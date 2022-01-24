@@ -105,7 +105,144 @@
   <img class="mySlides" src="img-3.jpg" style="width:100%">
 </div>
 
+  <div class="CodeforBoard">
+      <div class="CodeforBoardtwo">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="CodeforBoardthree"><span></span></div>
+        </div>
+        <div class="text">HTML & CSS</div>
+      </div>
+      <div class="CodeforBoardtwo js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="CodeforBoardthree"><span></span></div>
+        </div>
+        <div class="text">JavaScript</div>
+      </div>
+      <div class="CodeforBoardtwo react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="CodeforBoardthree"><span></span></div>
+        </div>
+        <div class="text">React JS</div>
+      </div>
+    </div>
 
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.85,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.70
+      });
+      $(".react .bar").circleProgress({
+        value: 0.60
+      });
+    </script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+.CodeforBoard{
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.CodeforBoard .CodeforBoardtwo{
+  background: #fff;
+  width: calc(33% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+ box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.CodeforBoard .CodeforBoardtwo .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+.CodeforBoardtwo .circle .CodeforBoardthree,
+.CodeforBoardtwo .circle .CodeforBoardthree span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.CodeforBoardtwo .circle .CodeforBoardthree{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.CodeforBoardtwo .circle:hover .CodeforBoardthree{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.CodeforBoardtwo .circle .CodeforBoardthree span,
+.CodeforBoard .CodeforBoardtwo .text{
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle .CodeforBoardthree span{
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.CodeforBoardtwo .circle:hover .CodeforBoardthree span{
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.CodeforBoardtwo .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+@media(max-width: 753px){
+  .CodeforBoard{
+    max-width: 700px;
+  }
+  .CodeforBoard .CodeforBoardtwo{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 505px){
+  .CodeforBoard{
+    max-width: 500px;
+  }
+  .CodeforBoard .CodeforBoardtwo{
+    width: 100%;
+  }
+}
+</style>
 <div class="first" style="margin: 1%; padding-top:40px;">
     <div class="box">
        <div class="front-face">
