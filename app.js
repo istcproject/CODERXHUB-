@@ -53,20 +53,3 @@ tl.fromTo(
     duration: 1,
   }
 );
-let options = {
-        startAngle: -1.55,
-        size: 150,
-        value: 0.85,
-        fill: {gradient: ['#a445b2', '#fa4299']}
-      }
-      $(".triangle .bar").triangleProgress(options).on('triangle-animation-progress',
-      function(event, progress, stepValue){
-        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
-      });
-      $(".js .bar").triangleProgress({
-        value: 0.70
-      });
-      $(".react .bar").triangleProgress({
-        value: 0.60
-      });
-    <
