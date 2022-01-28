@@ -332,6 +332,7 @@ footer span a:hover{
     }
     
     ::selection {
+      border-radius:50px;
       color: #000000;
       background: pink;
     }
