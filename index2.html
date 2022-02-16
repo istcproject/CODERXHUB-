@@ -4,11 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <head>
-
-    <title>Coderxhub</title>
-    
   <link rel="icon"  href="logo.png" >
-  
+  <title>Coderxhub</title>  
 </head>
 <body>
 
@@ -139,126 +136,7 @@
          
     
  </div>
- <style>
-     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-}
 
-.first{
- padding-top:40px;
- padding-bottom:40px;
-display: grid;
-margin: 200px 90px auto;
-grid-gap: 20px;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-@media (max-width: 700px) {
-.first{
-   padding-left:20px;                    
-  display: grid;
-  margin: 200px 90px auto;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));                         
-
-
-
-   }}
-.body{
-
-text-align:center;
-  }
-   
-  body{margin: 0px;
-    padding: 0%;
-  
-  text-align: center;
-  background: pink;
-}
-.first .box{
-width: 350px;
-margin: 0 auto;
-position: relative;
-
-
-}
-.first .box .front-face{
-border-radius: 20px;
-background: rgb(32, 32, 32);
-height: 350px;
-width: 300px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
-transition: all 0.5s ease;
-}
-.box .front-face .icon{
-height: 80px;
-}
-.box .front-face .icon i{
-font-size: 65px;
-}
-.box .front-face span,
-.box .back-face span{
-font-size: 22px;
-font-weight: 600;
-text-transform: uppercase;
-}
-.box .front-face .icon i,
-.box .front-face span{
-background: linear-gradient(-135deg, #c850c0, #4158d0);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-.box .back-face{
-border-radius: 20px;
-position: absolute;
-top: 0;
-left: 0;
-z-index: 1;
-height: 350px;
-width: 300px;
-padding: 30px;
-color: #fff;
-opacity: 0;
-transform-style: preserve-3d;
-backface-visibility: hidden;
-background: linear-gradient(-135deg, #c850c0, #4158d0);
-transform: translateY(110px) rotateX(-90deg);
-box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
-transition: all 0.5s ease;
-}
-.box .back-face p{
-  border-radius:20px;
-  margin-top: 10px;
-}
-.box:hover .back-face{
-opacity: 1;
-transform: rotateX(0deg);
-}
-.box:hover .front-face{
-opacity: 0;
-transform: translateY(-110px) rotateX(90deg);
-}
-                        </style>
-                          
-
-        <style>
-       #content-desktop {display: block;}
-#content-mobile {display: none;}
-
-@media screen and (max-width: 1000px) {
-
-#content-desktop {display: none;}
-#content-mobile {display: block;}
-
-}
-       
-        </style>
 <div>  
                          
   <img src="01. Welcome.png" alt="" width="100%">
