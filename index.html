@@ -1,75 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta http-equiv="refresh" content="3;url=https://coder2708.github.io/CODERXHUB-/index2.html" />
-</head>
-<body>
-  <div class="center">
-    <div class="ring"></div>
-    <span>loading...</span>
- </div>
-  <style>
-    body{
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading</title>
+    <meta http-equiv="refresh" content="3;url=https://coder2708.github.io/CODERXHUB-/index2.html" />
+   </head>
+   <body>
+      <div class="container">
+         <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+         <div class="shadow"></div>
+      </div>
+      <style>
+          body{
+    background-color: aquamarine;
+}
 
-  font-family: montserrat;
-  background: black;
-}
-.center{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.ring{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  animation: ring 2s linear infinite;
-}
-@keyframes ring {
-  0%{
-    transform: rotate(0deg);
-    box-shadow: 1px 5px 2px #e65c00;
+.container{
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  50%{
-    transform: rotate(180deg);
-    box-shadow: 1px 5px 2px #18b201;
+  .container .preloader{
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
   }
-  100%{
-    transform: rotate(360deg);
-    box-shadow: 1px 5px 2px #0456c8;
+  @keyframes rotate {
+    50%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(720deg);
+    }
   }
-}
-.ring:before{
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(255,255,255,.3);
-}
-span{
-  color: #737373;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 200px;
-  animation: text 3s ease-in-out infinite;
-}
-@keyframes text {
-  50%{
-    color: black;
+  .preloader span{
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background: rgb(206, 66, 66);
+    border: rgb(206, 66, 66);
+    border-radius: 100%;
   }
-}
-  </style>
-</body>
+  .preloader span:nth-child(1){
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_1 {
+    60%{
+      transform: scale(0.4);
+    }
+  }
+  .preloader span:nth-child(2){
+    transform: translate(28px, -28px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_2 {
+    40%{
+      transform: scale(0.4);
+    }
+  }
+  .preloader span:nth-child(3){
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shape_3 {
+    50%{
+      border-radius: 100%;
+      transform: scale(0.5) rotate(-45deg);
+    }
+    100%{
+      transform: scale(0.98) rotate(-45deg);
+    }
+  }
+  .shadow{
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+  @keyframes shadow {
+    50%{
+      transform: translateX(-50%) scale(0.5);
+      border-color: #f2f2f2;
+    }
+  }
+      </style>
+   </body>
 </html>
