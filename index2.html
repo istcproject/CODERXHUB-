@@ -10,6 +10,34 @@
   <title>Coderxhub</title>
 </head>
 <body>
+   <div class="opening">
+    <img src="cookie.png" alt="">
+    <div class="contextforcode">
+      <header>Visit Store</header>
+      <p> You Can Buy And Download Many Courses From There</p>
+      <div class="buttons">
+        <button class="item">No Thanks</button>
+        <a href="https://coderxhubstore.xyz" class="item">Visit</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   const cookieBox = document.querySelector(".opening"),
+    acceptBtn = cookieBox.querySelector("button");
+    acceptBtn.onclick = ()=>{
+      //setting cookie for 1 month, after one month it'll be expired automatically
+      document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+      if(document.cookie){ //if cookie is set
+        cookieBox.classList.add("hide"); //hide cookie box
+      }else{ //if cookie not set then alert an error
+        alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+    //if cookie is set then hide the cookie box else show it
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
   <link rel="stylesheet" href="newlook.css">
